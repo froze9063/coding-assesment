@@ -13,11 +13,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imgRobot: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPanjang: UILabel!
-   
     @IBOutlet weak var lblTinggi: UILabel!
     @IBOutlet weak var lblBerat: UILabel!
     @IBOutlet weak var LBLID: UILabel!
     @IBOutlet weak var btnEdit: UIButton!
+  
     @IBOutlet weak var viewDialog: UIView!
     @IBOutlet weak var lblDialogID: UILabel!
     @IBOutlet weak var tfNama: UITextField!
@@ -90,16 +90,16 @@ class DetailViewController: UIViewController {
          viewDialog.isHidden = false
     }
     
-    @IBAction func actionCloseDialog(_ sender: UIButton) {
-         viewDialog.isHidden = true
+    @IBAction func btnSimpan(_ sender: UIButton) {
+        editRobot()
     }
     
-    @IBAction func actionCloseDialogImage(_ sender: Any) {
+    @IBAction func btnImageCloseDialog(_ sender: UIButton) {
         viewDialog.isHidden = true
     }
     
-    @IBAction func actionSimpan(_ sender: UIButton) {
-        editRobot()
+    @IBAction func btnCloseDialog(_ sender: UIButton) {
+         viewDialog.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
